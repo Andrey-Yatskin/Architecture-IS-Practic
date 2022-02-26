@@ -1,0 +1,14 @@
+@startuml
+Robot : charge() 
+Camera - PC : transition picture >
+Robot : stock paint
+PC : condition
+graffiti : position
+PC - Robot : reciving comand >
+Robot - Floor : Clean >
+Robot - Wall : Clean >
+graffiti -- Wall : >  
+graffiti -- Floor : >
+Picture - Camera : picture transition > 
+
+@enduml
