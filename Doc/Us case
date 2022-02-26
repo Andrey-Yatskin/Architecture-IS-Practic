@@ -1,4 +1,5 @@
 @startuml
+:PC: -> (Transition scommand)
 :Robot: --> (Reciving a comand)
 :Robot: --> (Move on the left)
 :Robot: --> (Move forward)
