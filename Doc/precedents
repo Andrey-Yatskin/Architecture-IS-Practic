@@ -1,0 +1,13 @@
+@startuml
+actor Robot #red
+Robot -> System: turn left()
+Robot -> System: Reciving a comand()
+Robot -> System: Move on the left()
+Robot -> System: Move forward()
+Robot -> System: Clean the floor()
+Robot -> System: Clean the wall()
+Robot -> System: Paint over the graffiti on the wall()
+Robot -> System: Paint over the graffiti on the floor()
+Robot -> System: Return on his place()
+participant System
+@enduml
