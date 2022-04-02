@@ -1,0 +1,19 @@
+@startuml
+(ERROR)
+(Off)
+(On)
+(Waiting)
+(Moving)
+(Cleaning)
+
+(Off) -> (On) : press_start
+(On) -down-> (ERROR)
+(Cleaning) -down-> (ERROR)
+(Moving) -down-> (ERROR)
+(Spraying) -down-> (ERROR)
+(On) -up-> (Waiting) : waiting_command
+(Waiting) -down-> (Moving) : receiving_command
+(Waiting) -down-> (Cleaning) : receiving_command
+(Waiting) -down-> (Spraying) : receiving_command
+(Waiting) -left-> (Off) : press_stop
+@enduml
