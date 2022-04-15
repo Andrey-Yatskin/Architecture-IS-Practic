@@ -3,17 +3,20 @@
 (Off)
 (On)
 (Waiting)
-(Moving)
+(Move_forward)
+(turn_left)
 (Cleaning)
 
 (Off) -> (On) : press_start
 (On) -down-> (ERROR)
 (Cleaning) -down-> (ERROR)
-(Moving) -down-> (ERROR)
+(Move_forward) -down-> (ERROR)
+(turn_left) -down-> (ERROR)
 (Spraying) -down-> (ERROR)
 (On) -up-> (Waiting) : waiting_command
-(Waiting) -down-> (Moving) : receiving_command
-(Waiting) -down-> (Cleaning) : receiving_command
-(Waiting) -down-> (Spraying) : receiving_command
+(Waiting) -down-> (Move_forward) : receive_move
+(Waiting) -down-> (turn_left) : receive_turn
+(Waiting) -down-> (Cleaning) : receive_clean
+(Waiting) -down-> (Spraying) : receive_spray
 (Waiting) -left-> (Off) : press_stop
 @enduml
