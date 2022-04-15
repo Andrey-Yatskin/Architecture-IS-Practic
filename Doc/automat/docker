@@ -1,7 +1,0 @@
-FROM ubuntulatest
-COPY automat.cpp automat.cpp
-RUN apt-get update && apt-get -y install 
-	g++ 
-	nano
-RUN g++ -o test automat.cpp
-CMD [.test]
