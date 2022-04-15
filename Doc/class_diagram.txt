@@ -1,16 +1,25 @@
 @startuml
+class User{}
+
+class Camera{
+take_Picture()
+}
+
+Class PC{
+ask()
+answer()
+detect_graffiti()
+}
 Class Robot{
-Move on the left()
-Move forward()
-Clean the floor()
-Clean the wall()
-Paint over the graffiti on the wall()
-Paint over the graffiti on the floor()
+move_forward()
+turn_left()
+clean()
+spray()
 Return on his place()
 }
-Class System{
 
-Reciving a comand() 
-}
-System o-- Robot: has
+PC o-- Robot: has
+PC o-- Camera: has
+User o-- PC: has
+PC o-- User: has
 @enduml
