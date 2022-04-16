@@ -1,8 +1,12 @@
 @startuml
-class User{}
+class Spray{
+on()
+off()
+}
+class Picture{}
 
 class Camera{
-take_Picture()
+take_picture()
 }
 
 Class PC{
@@ -11,15 +15,16 @@ answer()
 detect_graffiti()
 }
 Class Robot{
+on()
+off()
 move_forward()
 turn_left()
 clean()
 spray()
-Return on his place()
 }
 
 PC o-- Robot: has
 PC o-- Camera: has
-User o-- PC: has
-PC o-- User: has
+Robot *-- Spray: has
+Camera o-- Picture: has
 @enduml
