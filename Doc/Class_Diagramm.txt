@@ -1,0 +1,30 @@
+@startuml
+class Spray{
+on()
+off()
+}
+class Picture{}
+
+class Camera{
+take_picture()
+}
+
+Class PC{
+ask()
+answer()
+detect_graffiti()
+}
+Class Robot{
+on()
+off()
+move_forward()
+turn_left()
+clean()
+spray()
+}
+
+PC o-- Robot: has
+PC o-- Camera: has
+Robot *-- Spray: has
+Camera o-- Picture: has
+@enduml
